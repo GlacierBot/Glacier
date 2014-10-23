@@ -23,6 +23,22 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInJoinGame.class);
         register(PacketPlayInChatMessage.class);
         register(PacketPlayInTimeUpdate.class);
+        // Entity Equipment (0x04)
+        // Spawn Position (0x05)
+        // Update Health (0x06)
+        // Respawn (0x07)
+        // Player Position and Look (0x08)
+        // Held Item Change (0x09)
+        // Use Bed (0x0A)
+        // Animation (0x0B)
+        // Spawn Player (0x0C)
+        // Collect Item (0x0D)
+        // Spawn Object (0x0E)
+        // Spawn Mob (0x0F)
+        // Spawn Painting (0x10)
+        // Spawn Experience Orb (0x11)
+        // Entity Velocity (0x12)
+        // Destroy Entities (0x13)
     }
 
     @Override
