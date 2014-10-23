@@ -6,6 +6,7 @@ import in.parapengu.glacier.handler.network.protocol.ProtocolBuilder;
 import in.parapengu.glacier.handler.network.protocol.exception.IllegalPacketException;
 import in.parapengu.glacier.protocol.v47.packets.handshake.PacketHandshakeOutState;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInChatMessage;
+import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntity;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInTimeUpdate;
@@ -39,6 +40,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         // Spawn Experience Orb (0x11)
         // Entity Velocity (0x12)
         // Destroy Entities (0x13)
+        register(PacketPlayInEntity.class);
     }
 
     @Override
