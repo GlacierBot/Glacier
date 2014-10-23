@@ -5,6 +5,7 @@ import in.parapengu.glacier.handler.network.protocol.Protocol;
 import in.parapengu.glacier.handler.network.protocol.ProtocolBuilder;
 import in.parapengu.glacier.handler.network.protocol.exception.IllegalPacketException;
 import in.parapengu.glacier.protocol.v47.packets.handshake.PacketHandshakeOutState;
+import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInChatMessage;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
 
@@ -19,6 +20,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         // Play Packets (in)
         register(PacketPlayInKeepAlive.class);
         register(PacketPlayInJoinGame.class);
+        register(PacketPlayInChatMessage.class);
     }
 
     @Override
