@@ -8,6 +8,7 @@ import in.parapengu.glacier.protocol.v47.packets.handshake.PacketHandshakeOutSta
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInChatMessage;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
+import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInTimeUpdate;
 
 public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
 
@@ -21,6 +22,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInKeepAlive.class);
         register(PacketPlayInJoinGame.class);
         register(PacketPlayInChatMessage.class);
+        register(PacketPlayInTimeUpdate.class);
     }
 
     @Override
