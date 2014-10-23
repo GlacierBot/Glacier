@@ -5,15 +5,7 @@ import in.parapengu.glacier.handler.network.protocol.Protocol;
 import in.parapengu.glacier.handler.network.protocol.ProtocolBuilder;
 import in.parapengu.glacier.handler.network.protocol.exception.IllegalPacketException;
 import in.parapengu.glacier.protocol.v47.packets.handshake.PacketHandshakeOutState;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInChatMessage;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntity;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntityEquipment;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInRespawn;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInSpawnPosition;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInTimeUpdate;
-import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInUpdateHealth;
+import in.parapengu.glacier.protocol.v47.packets.play.*;
 
 public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
 
@@ -33,7 +25,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInUpdateHealth.class);
         register(PacketPlayInRespawn.class);
         register(PacketPlayInSpawnPosition.class);
-        // Held Item Change (0x09)
+        register(PacketPlayInHeldItemChange.class);
         // Use Bed (0x0A)
         // Animation (0x0B)
         // Spawn Player (0x0C)
