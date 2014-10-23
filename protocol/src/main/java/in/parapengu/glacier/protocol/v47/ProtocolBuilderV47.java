@@ -10,6 +10,7 @@ import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntity;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntityEquipment;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
+import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInSpawnPosition;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInTimeUpdate;
 
 public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
@@ -26,8 +27,8 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInChatMessage.class);
         register(PacketPlayInTimeUpdate.class);
         register(PacketPlayInEntityEquipment.class);
-        // Spawn Position (0x05)
         // Update Health (0x06)
+        register(PacketPlayInSpawnPosition.class);
         // Respawn (0x07)
         // Player Position and Look (0x08)
         // Held Item Change (0x09)

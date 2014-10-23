@@ -126,4 +126,12 @@ public class PacketInputStream extends DataInputStream {
         return new ItemStack(id, count, damage, tag);
     }
 
+    public int[] readLocation() throws IOException {
+        long val = readLong();
+        int x = (int) (val >> 38);
+        int y = (int) ((val >> 26) & 0xFFF);
+        int z = (int) (val << 38 >> 38);
+        return new int[]{x, y, z};
+    }
+
 }
