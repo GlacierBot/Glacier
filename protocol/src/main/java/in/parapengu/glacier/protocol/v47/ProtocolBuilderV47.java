@@ -32,7 +32,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInSpawnPosition.class);
         register(PacketPlayInUpdateHealth.class);
         register(PacketPlayInRespawn.class);
-        // Player Position and Look (0x08)
+        register(PacketPlayInSpawnPosition.class);
         // Held Item Change (0x09)
         // Use Bed (0x0A)
         // Animation (0x0B)
