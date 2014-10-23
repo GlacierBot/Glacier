@@ -114,6 +114,7 @@
                                     <include>commons-io:commons-io</include>
                                     <include>org.fusesource.jansi:jansi</include>
                                     <include>org.bouncycastle:bcprov-jdk15on</include>
+                                    <include>me.hfox:aphelion-core</include>
                                 </includes>
                             </artifactSet>
                             <filters>
