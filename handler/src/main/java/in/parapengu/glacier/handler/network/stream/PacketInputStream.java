@@ -1,5 +1,9 @@
 package in.parapengu.glacier.handler.network.stream;
 
+import com.evilco.mc.nbt.stream.NbtInputStream;
+import com.evilco.mc.nbt.tag.ITag;
+import in.parapengu.glacier.handler.bot.inventory.ItemStack;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -107,6 +111,19 @@ public class PacketInputStream extends DataInputStream {
 
     public float readRotation() throws IOException {
         return (float) (readByte() / 360) * 256F;
+    }
+
+    public ItemStack readItem() throws IOException {
+        short id = readShort();
+        if (id == -1) {
+            return null;
+        }
+
+        byte count = readByte();
+        short damage = readShort();
+        NbtInputStream nbt = new NbtInputStream(this);
+        ITag tag = nbt.readTag();
+        return new ItemStack(id, count, damage, tag);
     }
 
 }

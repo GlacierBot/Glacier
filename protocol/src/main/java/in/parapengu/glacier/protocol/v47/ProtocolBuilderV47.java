@@ -7,6 +7,7 @@ import in.parapengu.glacier.handler.network.protocol.exception.IllegalPacketExce
 import in.parapengu.glacier.protocol.v47.packets.handshake.PacketHandshakeOutState;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInChatMessage;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntity;
+import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInEntityEquipment;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInJoinGame;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInKeepAlive;
 import in.parapengu.glacier.protocol.v47.packets.play.PacketPlayInTimeUpdate;
@@ -24,7 +25,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInJoinGame.class);
         register(PacketPlayInChatMessage.class);
         register(PacketPlayInTimeUpdate.class);
-        // Entity Equipment (0x04)
+        register(PacketPlayInEntityEquipment.class);
         // Spawn Position (0x05)
         // Update Health (0x06)
         // Respawn (0x07)
