@@ -26,7 +26,7 @@ public class ProtocolBuilderV47 extends ProtocolBuilder<ProtocolV47> {
         register(PacketPlayInRespawn.class);
         register(PacketPlayInSpawnPosition.class);
         register(PacketPlayInHeldItemChange.class);
-        // Use Bed (0x0A)
+        register(PacketPlayInUseBed.class);
         // Animation (0x0B)
         // Spawn Player (0x0C)
         // Collect Item (0x0D)
