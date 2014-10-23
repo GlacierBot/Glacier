@@ -4,7 +4,7 @@ import in.parapengu.glacier.handler.network.protocol.packet.Packet;
 
 public class IllegalPacketException extends Exception {
 
-    private static final long serialVersionUID = -2753114704710077722L;
+    private static final long serialVersionUID = 3906889797829764958L;
 
     private Class<? extends Packet> packet;
     private String reason;
