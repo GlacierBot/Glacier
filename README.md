@@ -11,5 +11,7 @@ If you encounter an issue with one of the Snapshot builds, please report the iss
 
 Any issues with external dependencies should be reported to their respective repository, unless of course the issue with an external dependency is caused by an error in Glacier's code.
 
+We do encourage that you test SNAPSHOT builds if you are an experienced Java developer. We do this so that we can push out a fully functional build as soon as possible!
+
 ## Compiling SNAPSHOT builds
-Compiling 
+Compiling Glacier should be as simple as running `mvn clean install`. In the event that the project fails to compile, report the issue or create a pull request with a fix.
